@@ -1,7 +1,7 @@
 #!/usr/bin/node
 /* eslint-disable no-unused-vars */
-const { count } = require("console");
-const request = require("request");
+const { count } = require('console');
+const request = require('request');
 
 const url = process.argv[2];
 
@@ -14,7 +14,7 @@ request(url, function (error, response, body) {
   let count = 0;
   films.forEach((film) => {
     const filteredCharacters = film.characters.filter((character) =>
-      character.includes("18")
+      character.includes('18')
     );
     if (filteredCharacters.length > 0) {
       count++;
